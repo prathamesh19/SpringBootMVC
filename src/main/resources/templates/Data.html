@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Data</title>
+</head>
+<body style="text-align: center;">
+<h1><b>DATA PAGE</b></h1>
+<br>
+<br>
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>DESIGNATION</th>
+</tr>
+<tr th:each="ob : ${list}">
+  <td th:text="${ob.empId}"></td>
+  <td th:text="${ob.empName}"></td>
+  <td th:text="${ob.empDesg}"></td>
+  <td>
+      <a th:href="@{/employee/delete(empId=${ob.empId})}">DELETE</a>
+      <a th:href="@{/employee/edit(empId=${ob.empId})}">EDIT</a>
+  </td>
+</tr>
+</table>
+</body>
+</html>

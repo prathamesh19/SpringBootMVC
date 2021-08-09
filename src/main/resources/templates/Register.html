@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+</head>
+<body style="text-align: center;">
+<h1><b>REGISTRATION PAGE</b></h1>
+<br>
+<form th:action="@{/employee/save}" method="POST" th:object="${employee}">
+<pre>
+<br>
+         ID : <input type="text" th:field="*{empId}"  style="text-align: center;">
+<br>
+       NAME : <input type="text" th:field="*{empName}"  style="text-align: center;">
+<br>
+DESIGNATION : <input type="text" th:field="*{empDesg}"  style="text-align: center;">
+<br>
+<input type="submit" value="ADD EMPLOYEE"  style="text-align: center;">
+<br>
+<span th:text="${message}"  style="text-align: center;"></span>
+</pre>
+</form>
+</body>
+</html>

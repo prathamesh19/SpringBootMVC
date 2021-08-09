@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit</title>
+</head>
+<body style="text-align: center;">
+<h1><b>EDIT PAGE</b></h1>
+<br>
+<form th:action="@{/employee/update}" method="POST" th:object="${employee}">
+<pre>
+<br>
+             ID : <input type="text" th:field="*{empId}" readonly style="text-align: center;">
+    <br>
+           NAME : <input type="text" th:field="*{empName}" style="text-align: center;">
+    <br>
+    DESIGNATION : <input type="text" th:field="*{empDesg}" style="text-align: center;">
+    <br>
+    <input type="submit" value="MODIFY EMPLOYEE" style="text-align: center;">
+</pre>
+</form>    
+</body>
+</html>
